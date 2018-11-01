@@ -1,0 +1,103 @@
+//
+//  PrefixHeader.pch
+//  PrivateOrdering
+//
+//  Created by 刘伟 on 16/3/3.
+//  Copyright © 2016年 江苏十分便民. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+//正式版
+
+
+
+#ifdef DEBUG
+//#define Host @"www.checheng.net/api" ///预上线
+//#define Host @"testwww.checheng.cn/api"
+#define Host @"source.checheng.com/api"
+#else
+//#define Host @"www.checheng.net/api" ///预上线
+//#define Host @"testwww.checheng.cn/api"
+#define Host @"source.checheng.com/api"
+#endif
+
+
+//图片appurl
+#define  myappicon @""
+#define  launchScreenImage @"launchScreenImage"
+
+
+
+
+
+#import "ThirdSourceKey.h"
+#import"DeviceManager.h"
+#import "Masonry.h"
+#import "Tool.h"
+#import "LoadingView.h"
+#import "UIView+DistributeSpace.h"
+#import "AFNetworking.h"
+#import "GCDObjC.h"
+#import "swift-bridge.h"
+
+
+#import "AlertView.h"
+#import "DialogView.h"
+#import "UserModel.h"
+#import "ColorHeader.h"
+#import "FontSizeHeader.h"
+#import "ZhengZeBianMa.h"
+#import "MJRefresh.h"
+#import "NSString+AES128.h"
+
+
+
+#import "UIAlertController+Blocks.h"
+#import "UIScrollView+WithoutDataView.h"
+#import "KeyboardObserver.h"
+#import "CustomRefreshGifHeader.h"
+
+//友盟统计事件
+#import "MobClick.h"
+
+#import "ToolHeader.h"
+
+
+
+
+
+#import "TTTAttributedLabel.h"
+
+#define kwidth [DeviceManager currentScreenSize].width
+#define kheight [DeviceManager currentScreenSize].height
+#define StatusHeight [UIApplication sharedApplication].statusBarFrame.size.height
+#define SafeAreaBottom [Tool safeAreaBottom]
+
+///高宽比
+#define imageHeightAspectWidth 2.0/3
+#define MaxCacheSize 50
+
+
+#define IOS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define IOS_9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define IOS_10_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
+#define IOS_11_OR_LATER  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
+#define IOS_12_OR_LATER  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0)
+#define urlBottom [Tool UrlBottom]
+
+#define lineHeight 0.6
+
+#ifdef DEBUG
+#define NsLog(s, ... ) NSLog( @"[%@：in line: %d]-->%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define NsLog(s, ... )
+#endif
+
+
+
+
+#endif /* PrefixHeader_pch */
